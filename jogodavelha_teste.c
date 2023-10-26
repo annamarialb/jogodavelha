@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 int main(){
+    setlocale(LC_ALL,"portuguese");
 
     // estrutura de dados?
     int l, c, linha, coluna, jogador, ganhou, jogadas, opcao;
