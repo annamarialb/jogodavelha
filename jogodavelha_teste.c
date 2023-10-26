@@ -5,6 +5,7 @@
 int main(){
     setlocale(LC_ALL,"portuguese");
 
+	// mexendo no código
     // estrutura de dados?
     int l, c, linha, coluna, jogador, ganhou, jogadas, opcao;
     char jogo[3][3];
