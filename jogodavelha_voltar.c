@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
 				// ler cordenadas
 				do{
 					printf("\n JOGADOR 1 = o\nJOGADOR 2 = x\n");
-					printf("\nJOGADOR %d: Digite a linha e a coluna que queira jogar: ", jogador);
+					printf("\nJOGADOR %d: Digite o número da linha e da coluna que queira jogar (com espaçamento entre os números): ", jogador);
 					scanf("%d%d", &linha, &coluna);
 				}while(linha<0 || linha>2 || coluna<0 || coluna>2 || jogo[linha][coluna]!=' ');
 				
