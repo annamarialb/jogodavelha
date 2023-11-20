@@ -3,18 +3,17 @@
 #include <string.h>
 #include <locale.h>
 
-/* Jogo da Velha. Projeto para TÈcnicas e Desenvolvimento de Algoritmos */
+/* Jogo da Velha. Projeto para T√©cnicas e Desenvolvimento de Algoritmos */
 
 struct Jogador{
     char nome[50];
     int vitorias;
 };
 
-int lerNumero() { // FunÁ„o para tratar erros do usu·rio
-    setlocale (LC_ALL, "portuguese");
+int lerNumero() { // Fun√ß√£o para tratar erros do usu√°rio
     int numero;
     while (scanf("%d", &numero) != 1) {
-        printf("\n OpÁ„o Inv·lida! Digite um n˙mero: \n ");
+        printf("\n Op√ß√£o Inv√°lida! Digite um n√∫mero: \n ");
         // Limpa o buffer de entrada
         while (getchar() != '\n');
     }
@@ -22,6 +21,7 @@ int lerNumero() { // FunÁ„o para tratar erros do usu·rio
 }
 
 int main(int argc, char *argv[]) {
+	setlocale (LC_ALL, "portuguese");
 	
 	int i, l, c, linha, coluna, jogador, ganhou, jogadas, numero = 0;
 	struct Jogador jogadores[2];
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 		printf("\n\tJOGO DA VELHA\n\n");
 		printf("1 - JOGAR\n");
 		printf("2 - VER RANKING\n");
-		printf("3 - CR…DITOS\n");
+		printf("3 - CR√âDITOS\n");
 		printf("4 - SAIR\n\n");
 		printf("Digite a opcao desejada: ");
 		numero = lerNumero();
@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
 					}
 				}
 				
-				do{ // repetir at√© algu√©m ganhar ou dar velha
+				do{ // repetir at√É¬© algu√É¬©m ganhar ou dar velha
 					// imprimir o jogo
 					printf("\n\n\t 0   1   2\n\n");
 					for(l=0; l<3; l++){
@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
 					// ler cordenadas
 					do{
 						printf("\nJOGADOR 1 (%s) = o\nJOGADOR 2 (%s) = x\n", jogadores[0].nome, jogadores[1].nome);
-						printf("\nJOGADOR %d: Digite a linha e a coluna que deseja jogar (observaÁ„o: dÍ um espaco entre os n˙meros): ", jogador);
+						printf("\nJOGADOR %d: Digite a linha e a coluna que deseja jogar (observa√ß√£o: d√™ um espaco entre os n√∫meros): ", jogador);
 						scanf("%d%d", &linha, &coluna);
 					}while(linha<0 || linha>2 || coluna<0 || coluna>2 || jogo[linha][coluna]!=' ');
 					
@@ -142,7 +142,7 @@ int main(int argc, char *argv[]) {
 						ganhou = 1;
 					}
 					
-					// ganhar na diagonal secund√°ria
+					// ganhar na diagonal secund√É¬°ria
 					if(jogo[0][2] == 'o' && jogo[1][1] == 'o' && jogo[2][0] == 'o'){
 						printf("\nO jogador 1 (%s) venceu!\n", jogadores[0].nome);
 						jogadores[0].vitorias++;
@@ -163,16 +163,16 @@ int main(int argc, char *argv[]) {
 			case 2:{
 				printf("\n\tRANKING\n\n");
                 
-                printf("Jogador 1: %d vitÛrias\n", jogadores[0].vitorias);
-                printf("Jogador 2: %d vitÛrias\n", jogadores[1].vitorias);
+                printf("Jogador 1: %d vit√≥rias\n", jogadores[0].vitorias);
+                printf("Jogador 2: %d vit√≥rias\n", jogadores[1].vitorias);
 				break;
 			}
 			case 3:{
 				printf("\n\t\t\t\tCREDITOS\n\n");
 				
 				printf("\n\tDesenvolvido por Anna Maria, Maria Eduarda e Milena Azevedo\n");
-				printf("\n\tAlunos do UNIP  - CiÍncia da ComputaÁ„o\n");
-				printf("\n\tTurma: TÈcnicas e Desenvolvimento de Algoritmos - 1B 2023.2\n\n");
+				printf("\n\tAlunos do UNIP√ä - Ci√™ncia da Computa√ß√£o\n");
+				printf("\n\tTurma: T√©cnicas e Desenvolvimento de Algoritmos - 1B 2023.2\n\n");
 				break;
 			}
 			case 4:{
@@ -181,7 +181,7 @@ int main(int argc, char *argv[]) {
 				break;
 			}
 			default:{
-				printf("\nOpÁ„o Inv·lida!\n");
+				printf("\nOp√ß√£o Inv√°lida!\n");
 				break;
 			}
 		}
