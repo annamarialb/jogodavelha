@@ -11,6 +11,7 @@ struct Jogador{
 };
 
 int lerNumero() { // Função para tratar erros do usuário
+    setlocale (LC_ALL, "portuguese");
     int numero;
     while (scanf("%d", &numero) != 1) {
         printf("\n Opção Inválida! Digite um número: \n ");
