@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 		printf("\n\tJOGO DA VELHA\n\n");
 		printf("1 - JOGAR\n");
 		printf("2 - VER RANKING\n");
-		printf("3 - CREDITOS\n");
+		printf("3 - CRÉDITOS\n");
 		printf("4 - SAIR\n\n");
 		printf("Digite a opcao desejada: ");
 		numero = lerNumero();
@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
 					// ler cordenadas
 					do{
 						printf("\nJOGADOR 1 (%s) = o\nJOGADOR 2 (%s) = x\n", jogadores[0].nome, jogadores[1].nome);
-						printf("\nJOGADOR %d: Digite a linha e a coluna que deseja jogar (observacao: de um espaco entre os numeros): ", jogador);
+						printf("\nJOGADOR %d: Digite a linha e a coluna que deseja jogar (observação: dê um espaco entre os números): ", jogador);
 						scanf("%d%d", &linha, &coluna);
 					}while(linha<0 || linha>2 || coluna<0 || coluna>2 || jogo[linha][coluna]!=' ');
 					
@@ -163,16 +163,16 @@ int main(int argc, char *argv[]) {
 			case 2:{
 				printf("\n\tRANKING\n\n");
                 
-                printf("Jogador 1: %d vitorias\n", jogadores[0].vitorias);
-                printf("Jogador 2: %d vitorias\n", jogadores[1].vitorias);
+                printf("Jogador 1: %d vitórias\n", jogadores[0].vitorias);
+                printf("Jogador 2: %d vitórias\n", jogadores[1].vitorias);
 				break;
 			}
 			case 3:{
 				printf("\n\t\t\t\tCREDITOS\n\n");
 				
 				printf("\n\tDesenvolvido por Anna Maria, Maria Eduarda e Milena Azevedo\n");
-				printf("\n\tAlunos do UNIPE - Ciencia da Computacao\n");
-				printf("\n\tTurma: Tecnicas e Desenvolvimento de Algoritmos - 1B 2023.2\n\n");
+				printf("\n\tAlunos do UNIPÊ - Ciência da Computação\n");
+				printf("\n\tTurma: Técnicas e Desenvolvimento de Algoritmos - 1B 2023.2\n\n");
 				break;
 			}
 			case 4:{
@@ -181,7 +181,7 @@ int main(int argc, char *argv[]) {
 				break;
 			}
 			default:{
-				printf("\nOpcao Invalida!\n");
+				printf("\nOpção Inválida!\n");
 				break;
 			}
 		}
