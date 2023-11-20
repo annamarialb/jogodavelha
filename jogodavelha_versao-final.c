@@ -1,18 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 
-/* Jogo da Velha. Projeto para T√©cnicas e Desenvolvimento de Algoritmos */
+/* Jogo da Velha. Projeto para TÈcnicas e Desenvolvimento de Algoritmos */
 
 struct Jogador{
     char nome[50];
     int vitorias;
 };
 
-int lerNumero() { // Fun√ß√£o para tratar erro de usu√°rio
+int lerNumero() { // FunÁ„o para tratar erros do usu·rio
     int numero;
     while (scanf("%d", &numero) != 1) {
-        printf("\nOp√ß√£o inv√°lida. \nDigite um n√∫mero: ");
+        printf("\n OpÁ„o Inv·lida! Digite um n˙mero: \n ");
         // Limpa o buffer de entrada
         while (getchar() != '\n');
     }
